@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import ResetPasswordForm from '@/components/auth/ResetPasswordForm';
 
 export default function ResetPasswordPage() {
@@ -9,7 +10,9 @@ export default function ResetPasswordPage() {
       }}
     >
       <div className="card-harvard bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
-        <ResetPasswordForm />
+        <Suspense fallback={<div className="text-center">Loading...</div>}>
+          <ResetPasswordForm />
+        </Suspense>
       </div>
     </div>
   );

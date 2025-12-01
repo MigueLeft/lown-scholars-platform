@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import VerifyEmailForm from '@/components/auth/VerifyEmailForm';
 
 export default function VerifyEmailPage() {
@@ -9,7 +10,9 @@ export default function VerifyEmailPage() {
       }}
     >
       <div className="card-harvard bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full">
-        <VerifyEmailForm />
+        <Suspense fallback={<div className="text-center">Loading...</div>}>
+          <VerifyEmailForm />
+        </Suspense>
       </div>
     </div>
   );

@@ -4,6 +4,8 @@ import Sidebar from "@/components/navigation/Sidebar";
 import MobileNav from "@/components/navigation/MobileNav";
 import HeaderDesktop from "@/components/navigation/HeaderDesktop";
 
+export const dynamic = 'force-dynamic';
+
 export default async function ProtectedLayout({
   children,
 }: {

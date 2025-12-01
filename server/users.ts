@@ -134,7 +134,6 @@ export const verifyEmailWithOtp = async (email: string, otp: string): Promise<Ac
 }
 
 export const requestPasswordReset = async (email: string, redirectTo: string): Promise<ActionResponse> => {
-    console.log("REDIRECT TO", redirectTo)
     try {
         await auth.api.requestPasswordReset({
             body: {

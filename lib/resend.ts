@@ -44,7 +44,6 @@ export async function sendOTPEmail({ to, otp, userName, type }: SendOTPEmailPara
       throw new Error(`Failed to send email: ${error.message}`);
     }
 
-    console.log('Email sent successfully:', data);
     return { success: true, data };
   } catch (error) {
     console.error('Error in sendOTPEmail:', error);
@@ -272,7 +271,6 @@ export async function sendPasswordResetEmail({ to, resetUrl, userName }: SendPas
       throw new Error(`Failed to send email: ${error.message}`);
     }
 
-    console.log('Password reset email sent successfully:', data);
     return { success: true, data };
   } catch (error) {
     console.error('Error in sendPasswordResetEmail:', error);

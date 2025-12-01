@@ -50,10 +50,6 @@ export const auth = betterAuth({
         nextCookies(),
         emailOTP({
             async sendVerificationOTP({ email, otp, type }) {
-                console.log(`OTP requested for ${email}`);
-                console.log(`OTP code: ${otp}`);
-                console.log(`Type: ${type}`);
-
                 try {
                     let emailType: 'verification' | 'password-reset' | 'sign-in' = 'verification';
 
@@ -70,7 +66,6 @@ export const auth = betterAuth({
                         otp: otp,
                         type: emailType
                     });
-                    console.log(`OTP email sent successfully to ${email}`);
                 } catch (error) {
                     console.error(`Failed to send OTP email to ${email}:`, error);
                     throw error;
